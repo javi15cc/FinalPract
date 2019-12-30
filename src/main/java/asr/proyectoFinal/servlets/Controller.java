@@ -223,9 +223,9 @@ public class Controller extends HttpServlet {
 			String respuestaHablar = Traductor.translate(respuestaTexto, "en", "es", false);
 			Speak.textToSay(respuestaHablar, response);
 			//request.getRequestDispatcher("/index.jsp").forward(request, response);
-			out.println("Escuchando...");
-			out.println("<br><br>");
-			out.println("<a href=\"/\">Atrás a página principal</a>");
+			//out.println("Escuchando...");
+			//out.println("<br><br>");
+			//out.println("<a href=\"/\">Atrás a página principal</a>");
 		}
 		
 	
