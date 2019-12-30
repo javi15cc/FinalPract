@@ -62,7 +62,7 @@ public class Controller extends HttpServlet {
 				}
 			break;
 			case "/instrucciones":
-				String respuestaTexto = "Fill all the fields and press the check my health button";
+				String respuestaTexto = "Fill all the fields and press the button to check your health";
 				String respuestaHablar = Traductor.translate(respuestaTexto, "en", "es", false);
 				Speak.textToSay(respuestaHablar, response);
 			break;
