@@ -14,7 +14,7 @@ public class Speak{
 
 	public static void textToSay(String text, HttpServletResponse response) {
 		
-		IamOptions options = new IamOptions.Builder().apiKey("VCCPkfMXwPrTytdUHBeXmj8UNLGP1LFBIWRFN0sKSjvw").build();
+		IamOptions options = new IamOptions.Builder().apiKey("5q4whoy9awn-x4tiKiQxesQHE_6AOU0WZPnqr9LY2HB7").build();
 		TextToSpeech textToSpeech = new TextToSpeech(options);
 		textToSpeech.setEndPoint("https://gateway-lon.watsonplatform.net/text-to-speech/api");
 		
