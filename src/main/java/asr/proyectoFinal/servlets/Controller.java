@@ -57,7 +57,8 @@ public class Controller extends HttpServlet {
 					out.println("No hay DB");
 				}else {
 					out.println("Clientes:<br />" + store.getAll());
-					out.println("<a href=\"javascript:history.back()\">Atrás</a>");
+					out.println("<br><br>");
+					out.println("<a href=\"javascript:history.back()\">Atras</a>");
 				}
 			break;
 				

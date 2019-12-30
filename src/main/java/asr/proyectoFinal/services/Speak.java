@@ -29,17 +29,17 @@ public class Speak{
 	       
 	       response.reset();
 	       
-	       InputStream in = WaveUtils.reWriteWaveHeader(inputStream);
+	       //InputStream in = WaveUtils.reWriteWaveHeader(inputStream);
 	       OutputStream out = response.getOutputStream();
 	       
 	       byte[] buffer = new byte[1024];
 	       int length;
-	       while ((length = in.read(buffer)) > 0) {
+	       while ((length = inputStream.read(buffer)) > 0) {
 	    	   out.write(buffer, 0, length);
 	       }
 
 	       out.close();
-	       in.close();
+	       //in.close();
 	       inputStream.close();
       } catch (IOException e) {
     	  e.printStackTrace();
