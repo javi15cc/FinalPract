@@ -71,8 +71,8 @@
 		}else if (new Integer(request.getAttribute("change").toString()).intValue() == 1){
 			
 			%>
-			<strong>Cliente: <%= request.getAttribute("nombre") %></strong><br>
-			<strong><%=request.getAttribute("respuestaTexto").toString() %></strong><br><br>
+			<strong>Cliente: <%= request.getAttribute("nombre") %></strong><br><br>
+			<strong><%=request.getAttribute("respuestaTexto").toString() %></strong><br>
 			<% JsonObject jsonObj = JsonParser.parseString(request.getAttribute("jsonfile").toString()).getAsJsonObject(); %>
 			Media total (0-1000) : <%=jsonObj.get("scr").getAsString() %><br>
 			Límite inferior de confianza (0-1000): <%=jsonObj.get("lcl").getAsString() %><br>
