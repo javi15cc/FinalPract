@@ -45,7 +45,7 @@
 			</ul>
 				<b>Descanso: </b><br/>
 			<ul>
-				<li>Tiempo en cama hoy (horas): <input type="text" name="tiempoCama"/><br/></li>
+				<li>Tiempo en la cama hoy (horas): <input type="text" name="tiempoCama"/><br/></li>
 				<li>Tiempo dormido/a hoy (horas): <input type="text" name="tiempoDormido"/><br/></li>
 				<li>Veces despertandose: <input type="text" name="vecesDespertandose"/><br/></li>
 				<li>Transferencia de Actividades Fisicas (en MET por hora): <input type="text" name="movement"><br></li>
