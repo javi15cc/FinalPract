@@ -62,7 +62,7 @@ public class Controller extends HttpServlet {
 				}
 			break;
 			case "/instrucciones":
-				String respuestaTexto = "Fill all the fields and press the button";
+				String respuestaTexto = "Fill all the fields and press the check my health button";
 				String respuestaHablar = Traductor.translate(respuestaTexto, "en", "es", false);
 				Speak.textToSay(respuestaHablar, response);
 			break;
@@ -79,10 +79,6 @@ public class Controller extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		out.println("<html><head><meta charset=\"UTF-8\"></head><body>");
-		
-			
-		if(request.getParameter("send").equals("CheckmyHealth")) {
-			
 		
 		
 		int cambio = 1;
@@ -223,15 +219,15 @@ public class Controller extends HttpServlet {
 		request.setAttribute("jsonfile", jsonresponse);
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 		
-		}else if(request.getParameter("send").equals("Instrucciones")) {
-			String respuestaTexto = "Fill all the fields and press the button";
-			String respuestaHablar = Traductor.translate(respuestaTexto, "en", "es", false);
-			Speak.textToSay(respuestaHablar, response);
+		//}else if(request.getParameter("send").equals("Instrucciones")) {
+			//String respuestaTexto = "Fill all the fields and press the button";
+			//String respuestaHablar = Traductor.translate(respuestaTexto, "en", "es", false);
+			//Speak.textToSay(respuestaHablar, response);
 			//request.getRequestDispatcher("/index.jsp").forward(request, response);
 			//out.println("Escuchando...");
 			//out.println("<br><br>");
 			//out.println("<a href=\"/\">Atrás a página principal</a>");
-		}
+		//}
 		
 	
 		

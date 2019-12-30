@@ -52,18 +52,15 @@
 				<li>Calidad de Vida: ¿Crees que estás saludable? (0/1)<input type="text" name="q01"><br></li>
 			</ul>
 				<input type="submit" name="send" value="CheckmyHealth"/>
-			
+			</form>
 		</div>
 		<div id="respuesta">Resultados: <p id="respuestaTexto" name="respuestaTexto">
 		
 		<% if (request.getAttribute("change") == null){
 			
 		%>
-		No hay resultados disponibles
-			<ul>
-				<input type="submit" name="send" value="Instrucciones">
-			</ul>
-			</form>
+		<br>No hay resultados disponibles<br>
+			
 			
 			<a href="instrucciones">Instrucciones de uso</a>
 		
@@ -96,11 +93,8 @@
 			Puntuación de bienestar (0-1000): <%=jsonObj.getAsJsonObject("subscores").get("wel").getAsString() %><br>
 			(Anti-) Puntuación de estrés (0-1000): <%=jsonObj.getAsJsonObject("subscores").get("str").getAsString() %><br>
 			
-			
-			<ul>
-				<input type="submit" name="send" value="Instrucciones">
-			</ul>
-			</form>
+			<br><br>
+			<a href="instrucciones">Instrucciones de uso</a>
 			
 			</p>
 			
@@ -109,12 +103,8 @@
 		}else{
 			%>
 			
-			No hay resultados disponibles
-			<ul>
-				<input type="submit" name="send" value="Instrucciones">
-			</ul>
+			<br>No hay resultados disponibles<br>
 			
-			</form>
 			
 			<a href="instrucciones">Instrucciones de uso</a>
 			
