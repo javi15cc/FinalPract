@@ -64,6 +64,8 @@
 				<input type="submit" name="send" value="Instrucciones">
 			</ul>
 			</form>
+			
+			<a href="instrucciones">Instrucciones de uso</a>
 		
 			</p>
 		<% 	
@@ -114,6 +116,7 @@
 			
 			</form>
 			
+			<a href="instrucciones">Instrucciones de uso</a>
 			
 			</p>
 			

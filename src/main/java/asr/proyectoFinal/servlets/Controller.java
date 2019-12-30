@@ -34,7 +34,7 @@ import asr.proyectoFinal.services.Traductor;
 /**
  * Servlet implementation class Controller
  */
-@WebServlet(urlPatterns = {"/listar", "/hablar", "/Controller"})
+@WebServlet(urlPatterns = {"/listar", "/instrucciones", "/Controller"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -60,6 +60,11 @@ public class Controller extends HttpServlet {
 					out.println("<br><br>");
 					out.println("<a href=\"javascript:history.back()\">Atras</a>");
 				}
+			break;
+			case "/instrucciones":
+				String respuestaTexto = "Fill all the fields and press the button";
+				String respuestaHablar = Traductor.translate(respuestaTexto, "en", "es", false);
+				Speak.textToSay(respuestaHablar, response);
 			break;
 				
 		}
@@ -219,7 +224,7 @@ public class Controller extends HttpServlet {
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 		
 		}else if(request.getParameter("send").equals("Instrucciones")) {
-			String respuestaTexto = "Fill all the fields and press the check my health button";
+			String respuestaTexto = "Fill all the fields and press the button";
 			String respuestaHablar = Traductor.translate(respuestaTexto, "en", "es", false);
 			Speak.textToSay(respuestaHablar, response);
 			//request.getRequestDispatcher("/index.jsp").forward(request, response);
